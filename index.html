@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Favorites Create LLC | Creative Media &amp; Marketing Solutions</title>
+<meta name="description" content="Favorites Create LLC is a creative media and marketing company offering branding, digital marketing, content creation, advertising, and creative digital services.">
+<meta property="og:title" content="Favorites Create LLC | Creative Media &amp; Marketing Solutions">
+<meta property="og:description" content="Creative Ideas. Powerful Stories. Meaningful Impact.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#101114;--bg2:#171A22;--blue:#5865F2;--lav:#A78BFA;--tx:#fff;--mu:#A1A1AA;--line:rgba(255,255,255,.1);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 17px/1.65 "Hanken Grotesk",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Hanken Grotesk",system-ui,sans-serif;line-height:1.05;margin:0 0 .5em;letter-spacing:-.02em}
+h1{font-size:clamp(2.6rem,7vw,5.6rem);font-weight:800}
+h2{font-size:clamp(2rem,4.5vw,3.4rem);font-weight:700}
+h3{font-size:1.35rem;font-weight:700}
+p{margin:0 0 1em;max-width:62ch;color:var(--mu)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lav);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+section.pg{display:none}section.pg.on{display:block}
+.sec{padding:84px 0}.alt{background:var(--bg2)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(16,17,20,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:rgba(16,17,20,.88);z-index:21}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 1.05rem "Bricolage Grotesque",sans-serif;letter-spacing:.04em}
+nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+nav a{display:block;padding:8px 12px;border-radius:99px;text-decoration:none;font-size:.92rem;color:var(--mu)}
+nav a:hover,nav a.cur{color:#fff;background:rgba(88,101,242,.22)}
+#mb{display:none;background:none;border:1px solid var(--line);color:#fff;border-radius:10px;padding:8px 12px;font:inherit}
+.btn{display:inline-block;padding:14px 26px;border-radius:99px;font-weight:600;text-decoration:none;border:1px solid var(--blue);background:var(--blue);color:#fff;cursor:pointer;font-size:1rem;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px);background:#6b77f5}
+.btn.o{background:transparent;border-color:var(--line)}.btn.o:hover{background:rgba(255,255,255,.06)}
+.row{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.hero{position:relative;overflow:hidden;padding:90px 0 70px;background:linear-gradient(120deg,#101114,#171A22,#1d1b3a,#101114);background-size:300% 300%;animation:g 16s ease infinite}
+@keyframes g{50%{background-position:100% 50%}}
+.hg{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.art{border-radius:28px;overflow:hidden;border:1px solid var(--line);background:var(--bg2)}
+.art svg{display:block;width:100%;height:auto}
+.fl{animation:fl 9s ease-in-out infinite}@keyframes fl{50%{transform:translateY(-10px)}}
+.grid{display:grid;gap:20px}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:22px;padding:28px;transition:border-color .2s}
+.alt .card{background:var(--bg)}
+.card:hover{border-color:var(--lav)}
+.card ul{margin:0;padding-left:1.1em;color:var(--mu)}
+.ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;margin-bottom:16px;background:linear-gradient(135deg,var(--blue),var(--lav))}
+.step{border-top:2px solid var(--blue);padding-top:16px}
+.step b{font:800 2.2rem "Bricolage Grotesque",sans-serif;color:var(--lav)}
+.cta{text-align:center;padding:90px 24px;background:linear-gradient(135deg,#232a6b,#171A22 60%,#3b2d73);border-radius:32px;margin:0 auto}
+.cta p{margin-inline:auto}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.filters button{background:none;border:1px solid var(--line);color:var(--mu);padding:8px 16px;border-radius:99px;font:inherit;cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--blue);border-color:var(--blue);color:#fff}
+.tile{padding:0;border:1px solid var(--line);border-radius:22px;overflow:hidden;cursor:pointer;background:var(--bg2);text-align:left;color:#fff;font:inherit}
+.tile svg{display:block;width:100%;height:auto}.tile span{display:block;padding:14px 18px;font-size:.92rem;color:var(--mu)}
+dialog{border:1px solid var(--line);border-radius:24px;background:var(--bg2);color:#fff;max-width:min(680px,92vw);padding:18px}
+dialog::backdrop{background:rgba(0,0,0,.75)}
+dialog svg{width:100%;height:auto;border-radius:16px}
+label{display:block;font-weight:600;margin:16px 0 6px;font-size:.95rem}
+input,select,textarea{width:100%;padding:13px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:#fff;font:inherit}
+.err{color:#ff9aa8;font-size:.88rem;min-height:1.2em}
+#fs{margin-top:16px;padding:14px;border-radius:12px;display:none}
+#fs.ok{display:block;background:rgba(88,101,242,.18)}#fs.bad{display:block;background:rgba(255,100,120,.15)}
+iframe{width:100%;height:320px;border:0;border-radius:22px;filter:grayscale(.4) invert(.9) hue-rotate(180deg)}
+footer{border-top:1px solid var(--line);padding:56px 0 30px;background:var(--bg2);margin-top:0}
+footer ul{list-style:none;padding:0;margin:0}footer li{margin:6px 0}footer a{color:var(--mu);text-decoration:none}footer a:hover{color:#fff}
+footer h3{font-size:1rem}
+.tag{display:inline-block;font-size:.82rem;color:var(--lav);border:1px solid var(--line);border-radius:99px;padding:3px 12px;margin-bottom:14px}
+@media(max-width:860px){.hg,.g2,.g3,.g4{grid-template-columns:1fr}.g4{grid-template-columns:1fr 1fr}#mb{display:block}nav ul{display:none;position:absolute;left:0;right:0;top:68px;background:var(--bg);flex-direction:column;padding:12px 24px;border-bottom:1px solid var(--line)}nav ul.open{display:flex}.sec{padding:60px 0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="logo" href="#home" aria-label="Favorites Create home"><svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#101114"/><path d="M40 20H24v24M24 31h11" fill="none" stroke="#5865F2" stroke-width="7" stroke-linecap="square"/><path d="M46 38v6H34" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="square"/></svg>FAVORITES CREATE</a>
+<nav aria-label="Main"><button id="mb" aria-expanded="false">Menu</button><ul id="nl">
+<li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#work">Our Work</a></li><li><a href="#industries">Industries</a></li><li><a href="#approach">Approach</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+</div></header>
+<main id="main">
+
+<section class="pg" id="home">
+<div class="hero"><div class="wrap hg">
+<div><h1>Make Your Brand Impossible to Ignore.</h1>
+<p style="font-size:1.15rem">Favorites Create brings creativity, media, and marketing together to help businesses tell their stories, connect with audiences, and build stronger digital identities.</p>
+<div class="row"><a class="btn" href="#services">Explore Our Services</a><a class="btn o" href="#contact">Let’s Talk</a></div></div>
+<div class="art fl" role="img" aria-label="Abstract illustration of a camera frame, play button, color palette and chart representing media production and marketing">
+<svg viewBox="0 0 480 440"><defs><linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5865F2"/><stop offset="1" stop-color="#A78BFA"/></linearGradient></defs>
+<rect width="480" height="440" fill="#171A22"/><circle cx="370" cy="90" r="130" fill="url(#a)" opacity=".25"/>
+<rect x="50" y="60" width="260" height="180" rx="20" fill="#101114" stroke="url(#a)" stroke-width="3"/><path d="M148 105l76 45-76 45z" fill="url(#a)"/>
+<rect x="250" y="200" width="180" height="140" rx="20" fill="#232738" stroke="#fff" stroke-opacity=".2"/>
+<rect x="274" y="290" width="22" height="28" rx="4" fill="#5865F2"/><rect x="308" y="268" width="22" height="50" rx="4" fill="#A78BFA"/><rect x="342" y="240" width="22" height="78" rx="4" fill="#fff"/><rect x="376" y="256" width="22" height="62" rx="4" fill="#5865F2"/>
+<circle cx="110" cy="320" r="48" fill="none" stroke="url(#a)" stroke-width="10"/><circle cx="110" cy="320" r="16" fill="#fff"/>
+<circle cx="190" cy="340" r="22" fill="#A78BFA"/><circle cx="224" cy="372" r="14" fill="#5865F2"/></svg></div>
+</div></div>
+<div class="sec"><div class="wrap"><h2>Creativity Meets Strategy.</h2>
+<p>We believe great creative work starts with understanding the story behind every brand. Favorites Create combines creative thinking, strategic communication, and modern media to help businesses express their identity and connect with the people who matter.</p></div></div>
+<div class="sec alt"><div class="wrap"><h2>What we do</h2><div class="grid g3" id="svcGrid"></div></div></div>
+<div class="sec"><div class="wrap"><h2>Creative Thinking. Purposeful Execution.</h2><div class="grid g4">
+<div class="card"><h3>Creative Excellence</h3><p>Ideas shaped with craft and attention to detail.</p></div>
+<div class="card"><h3>Strategic Thinking</h3><p>Every creative choice tied to a business goal.</p></div>
+<div class="card"><h3>Modern Solutions</h3><p>Current tools, formats, and platforms.</p></div>
+<div class="card"><h3>Client-Focused Approach</h3><p>Clear communication from first call to delivery.</p></div></div></div></div>
+<div class="sec alt"><div class="wrap"><h2>Our Process</h2><div class="grid g4" id="steps1"></div></div></div>
+<div class="sec"><div class="wrap"><div class="cta"><h2>Ready to Create Something Exceptional?</h2><p>Let’s turn your ideas into meaningful creative experiences.</p><a class="btn" href="#contact">Start a Project</a></div></div></div>
+</section>
+
+<section class="pg" id="about"><div class="sec"><div class="wrap">
+<h1 style="font-size:clamp(2.4rem,6vw,4.6rem)">Creativity Is at the Heart of Everything We Do.</h1>
+<p>Favorites Create LLC is a media and marketing company focused on creative communication, branding, and digital experiences. We help businesses present their story clearly, produce content people want to engage with, and build a consistent identity across every channel.</p>
+<div class="art" id="abArt" style="margin-top:36px;max-width:560px"></div><div class="grid g2" style="margin-top:40px"><div class="card"><h3>Mission</h3><p>To deliver thoughtful creative and marketing solutions that help businesses communicate their value and build meaningful connections.</p></div>
+<div class="card"><h3>Vision</h3><p>To become a trusted creative partner for businesses seeking innovative media, marketing, and digital communication solutions.</p></div></div>
+<h2 style="margin-top:60px">Core values</h2><div class="grid g3" id="vals"></div>
+<h2 style="margin-top:60px">Creative philosophy</h2><p>Strong creative work is built on understanding. We start with the audience and the objective, then shape visuals, words, and media that serve both.</p>
+</div></div></section>
+
+<section class="pg" id="services"><div class="sec"><div class="wrap">
+<h1 style="font-size:clamp(2.4rem,6vw,4.6rem)">Services</h1><p>Six disciplines, one connected creative team. Each service can stand alone or work together in a single campaign.</p>
+<div id="svcList" style="margin-top:40px;display:grid;gap:24px"></div>
+<div class="row"><a class="btn" href="#contact">Discuss your project</a></div></div></div></section>
+
+<section class="pg" id="work"><div class="sec"><div class="wrap">
+<h1 style="font-size:clamp(2.4rem,6vw,4.6rem)">Our Work</h1>
+<p>The pieces below are illustrative portfolio concepts, not projects for actual clients. Select one to enlarge it.</p>
+<div class="filters" id="flt" role="group" aria-label="Filter by category"></div>
+<div class="grid g3" id="pf"></div></div></div>
+<dialog id="lb"><div id="lbc"></div><div class="row"><button class="btn o" id="lbx">Close</button></div></dialog></section>
+
+<section class="pg" id="industries"><div class="sec"><div class="wrap">
+<h1 style="font-size:clamp(2.4rem,6vw,4.6rem)">Industries We Serve</h1>
+<p>Media and marketing support can benefit many kinds of businesses. These are areas where we see strong potential fit.</p>
+<div class="grid g3" id="ind" style="margin-top:36px"></div></div></div></section>
+
+<section class="pg" id="approach"><div class="sec"><div class="wrap">
+<h1 style="font-size:clamp(2.4rem,6vw,4.6rem)">Our Approach</h1><p>A simple, transparent process that keeps creative work tied to your goals.</p>
+<div class="grid g4" id="steps2" style="margin-top:36px"></div></div></div></section>
+
+<section class="pg" id="contact"><div class="sec"><div class="wrap">
+<h1 style="font-size:clamp(2.4rem,6vw,4.6rem)">Contact Us</h1><p>Tell us about your project and we’ll reply by email.</p>
+<div class="grid g2" style="margin-top:30px;align-items:start">
+<div><div class="art" id="ctArt" style="margin-bottom:20px"></div><div class="card"><h3>Favorites Create LLC</h3>
+<p>1412 Otter St, Anchorage, AK 99504, United States</p>
+<p><a href="tel:+13475064358">+1 (347) 506-4358</a><br><a href="mailto:contact@favoritescreate.xyz">contact@favoritescreate.xyz</a></p></div>
+<iframe style="margin-top:20px" title="Map of 1412 Otter St, Anchorage, AK" loading="lazy" src="" data-src="https://www.google.com/maps?q=1412+Otter+St,+Anchorage,+AK+99504&output=embed"></iframe>
+<p style="font-size:.85rem;margin-top:8px"><a href="https://www.google.com/maps/search/?api=1&query=1412+Otter+St+Anchorage+AK+99504" target="_blank" rel="noopener">Open in Google Maps</a></p></div>
+<form id="cf" class="card" novalidate>
+<label for="n">Full name</label><input id="n" autocomplete="name" required maxlength="100"><div class="err" id="e-n"></div>
+<label for="e">Email address</label><input id="e" type="email" autocomplete="email" required maxlength="120"><div class="err" id="e-e"></div>
+<label for="p">Phone number (optional)</label><input id="p" type="tel" autocomplete="tel" maxlength="30">
+<label for="c">Company name (optional)</label><input id="c" autocomplete="organization" maxlength="100">
+<label for="s">Service interested in</label><select id="s" required><option value="">Choose a service</option></select><div class="err" id="e-s"></div>
+<label for="m">Project details</label><textarea id="m" rows="5" required maxlength="3000"></textarea><div class="err" id="e-m"></div>
+<button class="btn" type="submit" style="margin-top:12px">Send by email</button>
+<div id="fs" role="status"></div></form></div></div></div></section>
+
+<section class="pg" id="privacy"><div class="sec"><div class="wrap">
+<h1>Privacy Policy</h1><p>Last updated: November 3, 2026. Draft text for legal review before launch.</p>
+<h3>Information we collect</h3><p>When you contact us, you may share your name, email address, phone number, company name, and project details. We use this information only to respond to your inquiry and discuss services.</p>
+<h3>How we share it</h3><p>We do not sell your personal information. We may share it with service providers who help us operate our email and website, under appropriate confidentiality terms.</p>
+<h3>Your choices</h3><p>You can ask us to access, correct, or delete the information you have sent us by writing to contact@favoritescreate.xyz.</p>
+<h3>Contact</h3><p>Favorites Create LLC, 1412 Otter St, Anchorage, AK 99504, United States.</p></div></div></section>
+
+<section class="pg" id="terms"><div class="sec"><div class="wrap">
+<h1>Terms &amp; Conditions</h1><p>Last updated: November 3, 2026. Draft text for legal review before launch.</p>
+<h3>Use of this site</h3><p>This website provides general information about Favorites Create LLC. Content is provided as is and may change without notice.</p>
+<h3>Services</h3><p>Services are provided under a separate written agreement or proposal. Nothing on this site is a binding offer.</p>
+<h3>Intellectual property</h3><p>Site content, including the illustrative portfolio concepts, is owned by Favorites Create LLC and may not be copied without permission.</p>
+<h3>Contact</h3><p>Questions? Email contact@favoritescreate.xyz.</p></div></div></section>
+
+<section class="pg" id="notfound"><div class="sec"><div class="wrap"><h1>Page not found</h1><p>The page you’re looking for doesn’t exist or has moved.</p><a class="btn" href="#home">Back to home</a></div></div></section>
+</main>
+
+<footer><div class="wrap grid g4">
+<div><a class="logo" href="#home">FAVORITES CREATE</a><p style="margin-top:12px;font-size:.92rem">A creative media and marketing company for brands that want to be seen and remembered.</p></div>
+<div><h3>Explore</h3><ul><li><a href="#about">About Us</a></li><li><a href="#work">Our Work</a></li><li><a href="#industries">Industries</a></li><li><a href="#approach">Approach</a></li></ul></div>
+<div><h3>Services</h3><ul id="fsv"></ul></div>
+<div><h3>Contact</h3><ul><li>1412 Otter St<br>Anchorage, AK 99504</li><li><a href="tel:+13475064358">+1 (347) 506-4358</a></li><li><a href="mailto:contact@favoritescreate.xyz">contact@favoritescreate.xyz</a></li><li><a href="#privacy">Privacy Policy</a></li><li><a href="#terms">Terms &amp; Conditions</a></li></ul></div>
+</div><div class="wrap"><p style="margin:36px 0 0;font-size:.88rem">© 2026 Favorites Create LLC. All rights reserved.</p></div></footer>
+
+<script>
+var S=[["Digital Marketing","Marketing strategy, campaign planning, and online brand promotion that reach the right audience.",["Marketing strategy","Campaign planning","Online brand promotion"],"M4 18l5-6 4 3 7-9"],
+["Branding & Graphic Design","Visual identities that make a business look consistent and recognizable.",["Visual identity","Logo and brand design","Marketing materials"],"M12 3l9 9-9 9-9-9z"],
+["Media & Content Production","Creative content built to hold attention across screens.",["Creative content","Video production","Photography","Video editing"],"M5 7h10v10H5zM15 11l5-3v8l-5-3"],
+["Social Media Management","Planning, creative, and engagement that keep your channels active and on brand.",["Content planning","Social media creative","Audience engagement"],"M4 5h16v11H9l-5 4z"],
+["Advertising & Creative Campaigns","Concepts and promotional content developed into complete campaigns.",["Advertising concepts","Campaign development","Promotional content"],"M4 14v-4l12-5v14zM16 9h4v6h-4"],
+["Web & Digital Creative Services","Websites and landing pages designed as complete digital experiences.",["Website design","Landing pages","Digital visual experiences"],"M3 5h18v14H3zM3 9h18"]];
+var $=function(s,r){return (r||document).querySelector(s)};
+function sv(d,k,c){return '<svg viewBox="0 0 480 300" role="img" aria-label="'+c+'"><defs><linearGradient id="v'+k+'" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5865F2"/><stop offset="1" stop-color="#A78BFA"/></linearGradient></defs><rect width="480" height="300" fill="#171A22"/><circle cx="380" cy="70" r="120" fill="url(#v'+k+')" opacity=".3"/><circle cx="90" cy="250" r="80" fill="#5865F2" opacity=".2"/><rect x="150" y="60" width="180" height="180" rx="36" fill="url(#v'+k+')"/><g transform="translate(180 90) scale(5)" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"><path d="'+d+'"/></g><circle cx="365" cy="225" r="16" fill="#fff"/><circle cx="110" cy="70" r="9" fill="#A78BFA"/></svg>'}
+
+function ic(d){return '<div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="'+d+'"/></svg></div>'}
+$("#svcGrid").innerHTML=S.map(function(s){return '<a class="card" href="#services" style="text-decoration:none">'+ic(s[3])+'<h3>'+s[0].replace("&","&amp;")+'</h3><ul>'+s[2].map(function(x){return '<li>'+x+'</li>'}).join("")+'</ul></a>'}).join("");
+$("#svcList").innerHTML=S.map(function(s,i){return '<div class="card grid g3" style="align-items:center"><div class="art">'+sv(s[3],"s"+i,"Illustration for "+s[0])+'</div><div>'+ic(s[3])+'<h2 style="font-size:2rem">'+s[0].replace("&","&amp;")+'</h2><p>'+s[1]+'</p></div><div><h3>Key deliverables</h3><ul>'+s[2].map(function(x){return '<li>'+x+'</li>'}).join("")+'</ul></div></div>'}).join("");
+$("#abArt").innerHTML=sv(S[1][3],"ab","Illustration of a brand identity mark");$("#ctArt").innerHTML=sv(S[3][3],"ct","Illustration of a conversation bubble");
+$("#fsv").innerHTML=S.map(function(s){return '<li><a href="#services">'+s[0].replace("&","&amp;")+'</a></li>'}).join("");
+$("#s").innerHTML+=S.map(function(s){return '<option>'+s[0].replace("&","&amp;")+'</option>'}).join("")+'<option>Not sure yet</option>';
+var P=[["Discover","Understand the client’s business, objectives, and audience."],["Strategize","Develop a creative direction and marketing approach."],["Create","Produce engaging visual content and creative solutions."],["Deliver","Present completed work and support the client’s next steps."]];
+var st=P.map(function(p,i){return '<div class="step"><b>0'+(i+1)+'</b><h3>'+p[0]+'</h3><p>'+p[1]+'</p></div>'}).join("");
+$("#steps1").innerHTML=st;$("#steps2").innerHTML=st;
+$("#vals").innerHTML=["Creativity","Integrity","Innovation","Quality","Collaboration","Commitment"].map(function(v){return '<div class="card"><h3>'+v+'</h3></div>'}).join("");
+$("#ind").innerHTML=[["Retail and E-commerce","Product storytelling, campaigns, and storefront visuals."],["Technology","Clear brand voice and visuals for complex ideas."],["Professional Services","Credible identities and content that build trust."],["Hospitality","Imagery and promotion that invite people in."],["Lifestyle and Consumer Brands","Content that gives products a personality."],["Startups and Small Businesses","Flexible creative support as a brand takes shape."]].map(function(i){return '<div class="card"><h3>'+i[0]+'</h3><p>'+i[1]+'</p></div>'}).join("");
+var C=["Branding","Graphic Design","Social Media","Photography","Video Production","Advertising"],cols=[["#5865F2","#A78BFA"],["#A78BFA","#5865F2"],["#3b46c4","#101114"],["#171A22","#5865F2"],["#101114","#A78BFA"],["#5865F2","#171A22"]];
+var shapes=['<circle cx="200" cy="130" r="56" fill="none" stroke="#fff" stroke-width="10"/>','<path d="M110 200l90-120 90 120z" fill="#fff" fill-opacity=".9"/>','<rect x="130" y="70" width="140" height="120" rx="16" fill="#fff" fill-opacity=".9"/><circle cx="200" cy="130" r="22" fill="#5865F2"/>','<rect x="120" y="60" width="160" height="140" rx="10" fill="none" stroke="#fff" stroke-width="8"/><circle cx="200" cy="130" r="30" fill="#fff"/>','<path d="M165 85l75 45-75 45z" fill="#fff"/>','<path d="M110 170l180-80v100z" fill="#fff" fill-opacity=".9"/>'];
+function art(i){return '<svg viewBox="0 0 400 260" role="img" aria-label="Illustrative '+C[i]+' concept"><defs><linearGradient id="t'+i+'" x1="0" y1="0" x2="1" y2="1"><stop stop-color="'+cols[i][0]+'"/><stop offset="1" stop-color="'+cols[i][1]+'"/></linearGradient></defs><rect width="400" height="260" fill="url(#t'+i+')"/>'+shapes[i]+'</svg>'}
+$("#flt").innerHTML=['All'].concat(C).map(function(c,i){return '<button aria-pressed="'+(i==0)+'" data-c="'+c+'">'+c+'</button>'}).join("");
+$("#pf").innerHTML=C.map(function(c,i){return '<button class="tile" data-c="'+c+'" data-i="'+i+'" aria-label="Enlarge '+c+' concept">'+art(i)+'<span>'+c+' concept (illustrative)</span></button>'}).join("");
+$("#flt").onclick=function(e){var c=e.target.dataset.c;if(!c)return;[].forEach.call($("#flt").children,function(b){b.setAttribute("aria-pressed",b===e.target)});[].forEach.call($("#pf").children,function(t){t.style.display=(c=="All"||t.dataset.c==c)?"":"none"})};
+var lb=$("#lb");$("#pf").onclick=function(e){var t=e.target.closest(".tile");if(!t)return;$("#lbc").innerHTML=art(+t.dataset.i).replace('id="t','id="z').replace('url(#t','url(#z')+'<p style="margin:12px 0 0">'+t.dataset.c+' concept. Illustrative only, not a client project.</p>';lb.showModal()};
+$("#lbx").onclick=function(){lb.close()};lb.onclick=function(e){if(e.target===lb)lb.close()};
+var R=["home","about","services","work","industries","approach","contact","privacy","terms"];
+function route(){var h=(location.hash||"#home").slice(1);var id=R.indexOf(h)>-1?h:"notfound";
+[].forEach.call(document.querySelectorAll("section.pg"),function(s){s.classList.toggle("on",s.id===id)});
+[].forEach.call(document.querySelectorAll("nav a"),function(a){a.classList.toggle("cur",a.getAttribute("href")==="#"+id)});
+document.title=(id=="home"?"Favorites Create LLC | Creative Media & Marketing Solutions":(id=="notfound"?"Page not found":id.charAt(0).toUpperCase()+id.slice(1))+" | Favorites Create LLC");
+if(id=="contact"){var f=$("iframe");if(!f.src||f.src==location.href)f.src=f.dataset.src}
+$("#nl").classList.remove("open");$("#mb").setAttribute("aria-expanded","false");window.scrollTo(0,0)}
+addEventListener("hashchange",route);route();
+$("#mb").onclick=function(){var o=$("#nl").classList.toggle("open");this.setAttribute("aria-expanded",o)};
+$("#cf").onsubmit=function(ev){ev.preventDefault();var ok=true,fs=$("#fs");
+function chk(id,bad,msg){$("#e-"+id).textContent=bad?msg:"";if(bad)ok=false}
+var n=$("#n").value.trim(),e=$("#e").value.trim(),s=$("#s").value,m=$("#m").value.trim();
+chk("n",n.length<2,"Enter your full name.");chk("e",!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e),"Enter a valid email address.");chk("s",!s,"Choose a service.");chk("m",m.length<10,"Describe your project in at least 10 characters.");
+if(!ok){fs.className="bad";fs.textContent="Please fix the highlighted fields.";return}
+var body="Name: "+n+"\nEmail: "+e+"\nPhone: "+$("#p").value+"\nCompany: "+$("#c").value+"\nService: "+s+"\n\n"+m;
+try{location.href="mailto:contact@favoritescreate.xyz?subject="+encodeURIComponent("Project inquiry: "+s)+"&body="+encodeURIComponent(body);
+fs.className="ok";fs.textContent="Your email app should now open with the message ready. Press send there to deliver it. If nothing opens, email contact@favoritescreate.xyz directly."}
+catch(x){fs.className="bad";fs.textContent="We couldn’t open your email app. Please email contact@favoritescreate.xyz directly."}};
+</script>
+</body>
+</html>
